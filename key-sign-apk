@@ -1,0 +1,40 @@
+#!/bin/bash
+# should be located in /usr/bin/key-sign-apk 
+echo "generalized script to sign apk using a random string from npm -g install randomstring"
+echo ""
+echo ""
+randomstring > random-key-string.txt
+echo "your random password for my-release-key.jks dont lose this random password if you commit to signing the apk with this random password"
+echo ""
+echo ""
+echo "enter this as a random-password for my-release-key.jks into Enter keystore password:"
+echo ""
+cat random-key-string.txt
+echo ""
+echo "saved as random-key-string.txt"
+echo ""
+echo ""
+rm -rf my-release-key.jks
+keytool -genkey -v -keystore my-release-key.jks -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+sleep 3s
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo "TO SIGN YOUR APK WITH my-release-key.jks      "
+echo "where build/outputs is your build output dir of your android app project"
+echo "cp -rf build/outputs/apk/prod/release/prod-release-unsigned.apk unsign.apk"
+sleep 2s
+echo ""
+echo ""
+echo "EXAMPLE of using my-release-key.jks to sign the apk"
+echo "/opt/Android-sdk/build-tools/29.0.3/apksigner sign --ks my-release-key.jks --out prod-out-logo-current.apk unsign.apk "
+sleep 2s
+echo ""
+echo "your random key string is stored in random-key-string.txt"
+echo ""
+echo ""
+cat random-key-string.txt
