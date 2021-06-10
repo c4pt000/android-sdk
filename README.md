@@ -39,7 +39,13 @@ or
 
 emulator @test64 -read-only &
 ```
-
+to create other emulators
+```
+to create other emulators
+sdkmanager  "system-images;android-29;google_apis;x86_64"
+sdkmanager --licenses
+avdmanager create avd -n test64 -k "system-images;android-29;google_apis;x86_64"
+```
 to install apk to emulator
 ```
 adb install path_to_apk
