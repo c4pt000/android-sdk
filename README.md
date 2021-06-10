@@ -29,5 +29,7 @@ docker run -it -d --privileged --rm -e DISPLAY=$DISPLAY -v /opt/YOURSOURCEDIR:/o
 -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/kvm:/dev/kvm --device /dev/snd c4pt/docker-androidsdk
 ```
 
-for pulseaudio and pavcontrol audio-device-monitoring
+to sign an APK
+```
+key-sign-apk 
 ```
