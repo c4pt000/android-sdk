@@ -29,6 +29,11 @@ docker run -it -d --privileged --rm -e DISPLAY=$DISPLAY -v /opt/YOURSOURCEDIR:/o
 -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/kvm:/dev/kvm --device /dev/snd c4pt/docker-androidsdk
 ```
 
+to install apk to emulator
+```
+adb install path_to_apk
+```
+
 to sign an APK
 ```
 key-sign-apk 
