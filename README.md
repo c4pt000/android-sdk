@@ -25,7 +25,7 @@ docker run -it -d --privileged --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.
 to run with a source directory attached
 
 ```
-docker run -it -d --privileged --rm -e DISPLAY=$DISPLAY -v /opt/YOURSOURCEDIR:/opt/YOURSOURCEDIR \
+docker run -it -d --privileged --rm -e DISPLAY=$DISPLAY -v /opt/SRCTEMP:/opt/SRCTEMP \
 -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/kvm:/dev/kvm --device /dev/snd c4pt/docker-androidsdk
 ```
 
