@@ -1,8 +1,8 @@
 # docker-android-sdk based off of fedora:34
-android-sdk portable
-java 1.8.0
+* android-sdk portable
+* uses java 1.8.0 in the docker image
 
-requires docker and kvm enabled in host
+# requires docker and kvm enabled in host
 set xhost before running, run as root
 ```
 xhost SI:localuser:root
